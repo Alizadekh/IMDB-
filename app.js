@@ -38,7 +38,8 @@ async function movie(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    return data;
+    // return data;
+    show(data);
   } catch (err) {
     console.log(err);
   }
@@ -46,13 +47,14 @@ async function movie(url) {
 
 function act() {
   const mov = `https://www.omdbapi.com/?apikey=${apiKey}&s=${inputVal.value}`;
-  return movie(mov);
+  movie(mov);
 }
 
 function show(actData) {
   cards.innerHTML = "";
   let myArr = actData.Search;
   console.log(myArr);
+  console.log(actData);
   myArr.forEach((element) => {
     cards.innerHTML += `
                 <div class="card">
@@ -67,9 +69,9 @@ function show(actData) {
   });
 }
 
-searchBtn.addEventListener("click", async (e) => {
+searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  const searchData = await act();
-  show(searchData);
+  act();
+  // show(searchData);
   console.error(err);
 });
