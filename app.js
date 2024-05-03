@@ -69,10 +69,7 @@ function show(actData) {
 
 searchBtn.addEventListener("click", async (e) => {
   e.preventDefault();
-  try {
-    const searchData = await act();
-    show(searchData);
-  } catch (err) {
-    console.error(err);
-  }
+  const searchData = await act();
+  show(searchData);
+  console.error(err);
 });
