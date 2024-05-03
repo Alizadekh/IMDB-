@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background-image: url("./bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.glass {
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.all {
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}
+h2 {
+  text-align: center;
+  font-size: 72px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+form {
+  text-align: center;
+  margin: 30px 0;
+}
+form input {
+  width: 30%;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: black;
+}
+form button {
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-size: 20px;
+  color: black;
+  transition: 0.4s;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: orange;
+  color: rgb(255, 255, 255);
+}
+/* Cards */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cards .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  color: rgb(69, 66, 66);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+.card img {
+  width: 15%;
+}
